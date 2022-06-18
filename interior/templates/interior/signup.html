@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+    <head><title>Signup</title>
+      
+        <link rel="icon" type="text/css" href="favicon.ico">
+    </head>
+    <body>
+        <header>
+            <div class="main">
+                <div class="logo">
+                    
+                </div>
+                <ul>
+                    
+                    <li ><a href="/login">LOG IN</a></li>
+                    <li class="active"><a href="/signup">SIGN UP</a></li>
+                    
+                </ul>
+            </div>
+        </header>
+        <div class="signupbox">
+            <div class="center">
+                <label>   &nbsp;</label>
+                <h1>Signup</h1>
+                <form method="post" action='/register'>
+                    <div class="txt_field">
+                        <label>Username</label><br><br>
+                        <input type="text" required name="users" placeholder="Enter Username">
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="txt_field">
+                        <label>Email Id</label><br><br>
+                        <input type="text" required name="Emails" placeholder="Enter Email Id">
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="txt_field">
+                        <label>Password</label><br><br>
+                        <input type="password"required name="pswss" placeholder="Enter Password">
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="txt_field">
+                        <label>Confirm Password</label><br><br>
+                        <input type="password" required name="psw" placeholder="Confirm Password">
+                        <span class="text-danger"></span>
+                    </div>
+                    <input type="submit" name="signup" value="Signup">
+                    <label>&nbsp;</label>
+                </form>
+            </div>
+        </div>
+    </body>
+    <style>
+        .loginbox{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 0 10 20px 0;
+    border-bottom: 1px solid silver;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.txt_field input{
+    width:  100%;
+    padding:  0 5px;
+    color: whitesmoke;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.txt_file label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translate(-50%);
+    font-size: 16px;
+
+    transition: .5s;
+}
+.txt_field span::before{
+    content:'';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background:#2691d9;
+    transition: .5s;
+}
+    .txt_field input:valid ~ label{
+    top: -5px;
+    color:whitesmoke;
+}
+    .txt_field input:focus ~ span::before,
+    .txt_field input:valid ~ span :before{
+    width: 100%;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    
+    border-radius: 25px;
+    font-size: 18px;
+    
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: red;
+    transition: .5s;
+}
+body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(/home/yogi/flask_app/static/images/a.jpeg);
+    height: 633px;
+    width: 1250px;
+    background-size: cover;
+    background-position: top;
+}
+.signupbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: black;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+header{
+    
+    height: 140px;
+    width: 1270px;
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 40px;
+
+}
+ul li{
+    display: inline-block;
+
+}
+ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 6px 25px;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+}
+ul li a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+ul li.active a{
+    background-color: whitesmoke;
+    color: black;
+}
+.logo img{
+    float: left;
+    height: 130px;
+    width: 170px;
+    border-radius: 100%;
+}
+
+/*contactus*/
+
+.contactus{
+    height: 300px;
+    width: 500px;
+    margin: auto;
+    background-color: whitesmoke;
+}
+
+.iconn
+{
+    color: #FDEFF4;
+}
+.contacttext{
+    color: whitesmoke;
+
+}
+.icon{
+    color: whitesmoke;
+    margin: 30% 30% 0;
+}
+
+/*Carousel*/
+.container{
+    margin-top: 20%;
+}
+.img-text{
+    width: 100%;
+    height: 320px;
+    display: block;
+    text-align: center;
+    padding: 40% 5%;
+    background: #711A75;
+    color: #180A0A;
+    border-radius: 15px;
+}
+.img-text h2{
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.img-text p{
+    font-size: 14px;
+}
+.single-box{
+    position: relative;
+    margin-bottom: 30px ;
+}
+.img-area{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #fff;
+    overflow: hidden;
+    top: 15px;
+    left: 125px;
+    border-radius: 50%;
+}
+.img-area img{
+    width: 100%;
+}
+
+/*search page*/
+.pass-img{
+    width: 100%;
+    height: auto;
+}
+    </style>
+    </style>
+</html>
